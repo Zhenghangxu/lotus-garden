@@ -1,14 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./output.css";
+import App from "./App";
+import { RouterProvider } from "react-router-dom";
+
+// Import Fonts
+import "@fontsource-variable/noto-sans-kayah-li";
+import "@fontsource/kaushan-script";
+import "@fontsource/inria-serif/300.css";
+import "@fontsource/inria-serif/400.css";
+import "@fontsource/inria-serif/700.css";
+import '@fontsource-variable/inter';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={App} />
   </React.StrictMode>
 );
 
