@@ -3,3 +3,19 @@
   content: "/";
   display: block;
 }
+/* About Us Button */
+
+.about-us-btn * {
+  transition: all 0.3s ease-in-out;
+}
+.about-us-btn:hover .arrow-ico {
+  transform: translateX(10px) translateY(10px);
+}
+
+.about-us-btn:hover .text-container {
+  transform: scale(1.1);
+}
+
+.about-us-btn:hover .text-container > * {
+  font-weight: 400;
+}

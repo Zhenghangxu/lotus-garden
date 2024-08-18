@@ -10,12 +10,12 @@ export interface navigationProps {
   navItems: navItemProps[];
   activeItem: number;
   isOpen?: boolean;
+  setActiveItem?: any;
 }
 
 export default function App(props: navigationProps) {
   const navLinkClasses =
     "text-black text-[18px] font-noto-sans-kayah-li font-normal tracking-wide block no-underline";
-  const [activeItemState, setActiveItemState] = useState(props.activeItem);
   return (
     <div className="w-full h-[85px] bg-transparent sticky top-0 left-0 z-20">
       <div className="container mx-auto h-full flex flex-row items-center justify-between">
@@ -45,10 +45,10 @@ export default function App(props: navigationProps) {
                 <a
                   key={item.text}
                   className={`${navLinkClasses} ${
-                    index === activeItemState ? "!font-bold" : ""
+                    index === props.activeItem ? "!font-bold" : ""
                   }`}
                   href="#"
-                  onClick={() => setActiveItemState(index)}
+                  onClick={() => props.setActiveItem(index)}
                 >
                   {item.text}
                 </a>
